@@ -2,6 +2,8 @@
 
 [简体中文](README.md) | **English**
 
+[![CI](https://github.com/spongia9/n8n-workflow-doctor/actions/workflows/tests.yml/badge.svg)](https://github.com/spongia9/n8n-workflow-doctor/actions/workflows/tests.yml)
+
 An offline, read-only n8n workflow diagnostic tool. Inspect JSON/ZIP structures, call dependencies and migration risks before import. Includes a native Windows workbench and CLI. Not affiliated with n8n.
 
 ## Features
@@ -67,6 +69,8 @@ ZIP path/count/size/decompression guards, escaped HTML, restrictive CSP and sand
 ## Verification
 
 Version **0.1.0**. Local Windows/Python 3.12.13/Edge record dated 2026-11-16: 313 backend and 55 Vitest tests; browser suites separately passed 15 (14 live API + 1 mock), 17 (reusing the first 14), 1 real hostile-HTML HTTP case and 2 production-interaction cases. Typecheck, build and OpenAPI checks passed locally; this is not remote CI evidence.
+
+[Remote CI passed on 2026-11-16](https://github.com/spongia9/n8n-workflow-doctor/actions/runs/43830078427): all five Windows/Linux backend, frontend, Chromium integration and native Windows jobs succeeded. Remote interpreters were Python 3.12.10 on Windows and 3.12.16 on Linux. Optional Docker validation was not run and is not certified by these results.
 
 Authorized real-export compatibility remains unverified. All public fixtures are fabricated, and destination import/execution is not certified. See [testing](docs/TESTING.md) and [compatibility](docs/COMPATIBILITY.md).
 

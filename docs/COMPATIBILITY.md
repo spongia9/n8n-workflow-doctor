@@ -9,3 +9,5 @@
 2026-11-16 首次远程 CI：前端任务通过；Windows 在安装阶段报告没有可用的固定 3.12.13 构建，未执行测试。工作流改用 setup-python 的 3.12 系列选择，并记录运行器实际解释器；各平台解析到的补丁版本可能不同。该配置修正不代表后续 CI 已通过，以 [Actions](https://github.com/spongia9/n8n-workflow-doctor/actions) 的实际记录为准。
 
 正式原生部署只要求 Windows、Python 和构建阶段的 Node。未承诺第二台干净主机、其他浏览器或容器运行已验证。没有认证、持久化历史、自动执行或迁移。
+
+2026-11-16 修复后 [远程运行 43830078427](https://github.com/spongia9/n8n-workflow-doctor/actions/runs/43830078427) 对提交 05a3f4c 实际成功：Windows Python 3.12.10 和 Linux Python 3.12.16 各执行 313 项后端测试；前端、Linux Chromium 集成及 Windows 原生部署任务均成功。可选 Docker 任务跳过；真实导出和第二台用户主机人工验收仍未完成。运行器验收不等同所有 Windows 安装环境均兼容。

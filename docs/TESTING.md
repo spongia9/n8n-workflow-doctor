@@ -30,3 +30,5 @@ Windows 可用 npm.cmd / npx.cmd。现有 5173/8000 用户服务活跃时，给�
 2026-11-16 公开发布副本复验：新建 Python 3.12.13 虚拟环境，按哈希锁安装依赖并安装当前项目，pip check 通过。实际运行后端 313 项、Vitest 55 项、常规浏览器 15 项、原生浏览器 17 项、真实恶意 HTML HTTP 1 项、优化生产交互 2 项，均通过；原生套件复用的 14 项业务断言不重复计作新测试。TypeScript、同源生产构建、实际 OpenAPI 契约通过；npm audit 为 0 漏洞。文件审查针对暂存对象；保留日志在本地，不发布本地路径或原始输入。
 
 远程工作流是否通过，以实际 Actions run 为准。临时 ZIP、报告、trace、日志和原始文件不提交。
+
+2026-11-16 [远程 CI 43830078427](https://github.com/spongia9/n8n-workflow-doctor/actions/runs/43830078427) 对提交 05a3f4c 全部常规任务成功：Windows Python 3.12.10 / Linux Python 3.12.16 分别 313 项后端测试；前端类型、55 项 Vitest、audit 与生产构建；Linux Chromium 15/1/2 三套浏览器测试；Windows Edge 原生部署套件。Docker 仅可选手动触发，本次未执行。真实样本兼容性不属于这些合成测试结论。

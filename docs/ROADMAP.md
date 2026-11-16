@@ -7,10 +7,11 @@
 - 规则说明、Finding ID、层级定位、统一统计、中文分组及详情。
 - 本地 FastAPI、Vue 诊断台、四格式报告、Windows 原生启停。
 - 自动化测试、公开文件审查和 CI 配置。
+- [远程 CI 五个常规任务通过](https://github.com/spongia9/n8n-workflow-doctor/actions/runs/43830078427)：Windows/Linux 后端、前端、Chromium 与 Windows 原生部署。
 
 ## 下一步
 
-- 在公开仓库实际运行 CI，记录平台结果。
+- 持续运行并审查 CI；容器验证仍为可选、未执行状态。
 - 取得明确授权的真实导出，记录版本、来源、哈希及误报。
 - 干净 Windows 主机复现安装/更新与更多浏览器验证。
 - 独立规则说明中心；按工作流/风险筛选导出。

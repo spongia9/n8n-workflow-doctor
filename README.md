@@ -2,6 +2,8 @@
 
 **简体中文** | [English](README.en.md)
 
+[![CI](https://github.com/spongia9/n8n-workflow-doctor/actions/workflows/tests.yml/badge.svg)](https://github.com/spongia9/n8n-workflow-doctor/actions/workflows/tests.yml)
+
 离线、只读的 n8n 工作流诊断工具。在导入或迁移前检查 JSON/ZIP 的结构、调用依赖与迁移风险，提供 Windows 本机诊断台和 CLI。与 n8n 官方无隶属关系。
 
 ## 功能
@@ -67,6 +69,8 @@ ZIP 有路径、数量、大小、总解压量等限制；HTML 使用转义、CS
 ## 验证状态
 
 当前版本 **0.1.0**。2026-11-16 本地 Python 3.12.13 / Windows Edge 验证记录：后端 313、Vitest 55；浏览器四套分别为 15（14 真实接口 + 1 Mock）、17（复用前 14）、1 真实恶意 HTML HTTP、2 生产交互。类型、构建与 OpenAPI 契约通过；这些是本地结果，不能代替远程 CI。
+
+2026-11-16 [远程 CI 实际通过](https://github.com/spongia9/n8n-workflow-doctor/actions/runs/43830078427)：Windows/Linux 后端、前端、Chromium 集成和 Windows 原生部署五个任务全部成功。远程 Python 为 Windows 3.12.10、Linux 3.12.16；可选 Docker 任务未执行，不代表容器验证通过。
 
 授权真实 n8n 导出兼容性仍待验证；所有公开样本均为合成数据。不声称目标环境可导入或可运行。见 [测试说明](docs/TESTING.md) 与 [兼容性记录](docs/COMPATIBILITY.md)。
 
