@@ -1,0 +1,40 @@
+{
+  "id": "FORMAL_C",
+  "name": "Fabricated formal cycle",
+  "nodes": [
+    {
+      "id": "call-A",
+      "name": "call-A",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "FORMAL_A"
+        }
+      }
+    },
+    {
+      "id": "future-call",
+      "name": "future-call",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 99,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": "FORMAL_A"
+      }
+    }
+  ],
+  "connections": {},
+  "settings": {
+    "errorWorkflow": "DEFAULT"
+  }
+}

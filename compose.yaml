@@ -1,0 +1,55 @@
+name: workflow-doctor-local
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: deploy/backend/Dockerfile
+    image: workflow-doctor-backend:sprint6-local
+    user: "10001:10001"
+    init: true
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    tmpfs: ["/tmp:rw,noexec,nosuid,nodev,size=32m,mode=1777"]
+    environment:
+      WORKFLOW_DOCTOR_CONTAINER: "1"
+      TMPDIR: /tmp
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+    mem_limit: 512m
+    cpus: 1.0
+    pids_limit: 64
+    stop_grace_period: 25s
+    restart: unless-stopped
+    networks: [diagnostics]
+    logging:
+      driver: local
+      options: {max-size: "2m", max-file: "2"}
+  frontend:
+    build:
+      context: .
+      dockerfile: deploy/frontend/Dockerfile
+    image: workflow-doctor-frontend:sprint6-local
+    user: "101:101"
+    init: true
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    tmpfs: ["/tmp:rw,noexec,nosuid,nodev,size=16m,mode=1777"]
+    ports: ["127.0.0.1:8080:8080"]
+    depends_on:
+      backend:
+        condition: service_healthy
+        restart: true
+    mem_limit: 128m
+    cpus: 0.5
+    pids_limit: 32
+    stop_grace_period: 15s
+    restart: unless-stopped
+    networks: [diagnostics]
+    logging:
+      driver: local
+      options: {max-size: "2m", max-file: "2"}
+networks:
+  diagnostics:
+    internal: true

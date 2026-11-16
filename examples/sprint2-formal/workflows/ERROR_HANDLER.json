@@ -1,0 +1,21 @@
+{
+  "id": "FORMAL_ERROR",
+  "name": "Fabricated formal error handler",
+  "nodes": [
+    {
+      "id": "error-trigger",
+      "name": "error-trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    }
+  ],
+  "connections": {},
+  "settings": {
+    "errorWorkflow": "DEFAULT"
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "name": "Synthetic export-shape regression (not a real export)",
+  "nodes": [
+    {
+      "id": "trigger",
+      "name": "trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "route",
+      "name": "route",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "rules": {
+          "values": []
+        }
+      }
+    },
+    {
+      "id": "agent",
+      "name": "agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "Synthetic structural input only"
+      }
+    },
+    {
+      "id": "model",
+      "name": "model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "synthetic-model"
+        }
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "synthetic-credential-id",
+          "name": "Synthetic reference only"
+        }
+      }
+    },
+    {
+      "id": "tool",
+      "name": "tool",
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "synthetic-child"
+        }
+      }
+    },
+    {
+      "id": "merge",
+      "name": "merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "mode": "append"
+      }
+    },
+    {
+      "id": "http",
+      "name": "http",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "url": "https://example.invalid/offline-only",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer SYNTHETIC_SHAPE_ONLY"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "child",
+      "name": "child",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "source": "database",
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "synthetic-child"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "trigger": {
+      "main": [
+        [
+          {
+            "node": "route",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "route": {
+      "main": [
+        [
+          {
+            "node": "agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "merge",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        null,
+        [
+          {
+            "node": "child",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "agent": {
+      "main": [
+        [
+          {
+            "node": "merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "merge": {
+      "main": [
+        [
+          {
+            "node": "http",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "http": {
+      "main": [
+        [
+          {
+            "node": "child",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "meta": {
+    "fixture_origin": "wholly fabricated, no n8n export used"
+  },
+  "futureField": {
+    "preserve": [
+      null,
+      {
+        "opaque": true
+      }
+    ]
+  }
+}

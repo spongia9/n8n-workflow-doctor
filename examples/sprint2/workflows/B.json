@@ -1,0 +1,52 @@
+{
+  "id": "B",
+  "name": "Synthetic child",
+  "nodes": [
+    {
+      "id": "B-call-C",
+      "name": "Call C",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": "C"
+      }
+    },
+    {
+      "id": "B-fetch",
+      "name": "Fetch B",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "url": "https://service.example.invalid/status"
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "DEMO_CREDENTIAL",
+          "name": "Synthetic demo credential"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Call C": {
+      "main": [
+        [
+          {
+            "node": "Fetch B",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; style-src &#x27;sha256-bEKKfPPkUoe1zSQ2vIJDkw6HRNuBtA41YrtTRfTqCbU=&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>n8n Workflow Doctor · 迁移诊断报告</title><style>:root{color-scheme:light;--navy:#142b49;--blue:#245eb3;--paper:#fff;--bg:#f1f4f8;--ink:#21334a;--muted:#52647b;--line:#d9e1eb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 'Segoe UI','Microsoft YaHei','PingFang SC',sans-serif}
+header{background:var(--navy);color:white;padding:32px max(24px,calc((100% - 1180px)/2));border-top:5px solid #427cce}
+.brand{letter-spacing:.16em;font:12px Consolas,monospace;color:#c4d7f0}h1{font-size:32px;letter-spacing:.02em;margin:12px 0 8px}header p{color:#d1ddeb;margin:4px 0}
+nav{display:flex;gap:24px;flex-wrap:wrap;margin-top:20px}nav a{color:white;text-decoration:underline;text-underline-offset:5px}a:focus-visible,summary:focus-visible{outline:3px solid #dc9e32;outline-offset:4px}
+main{max-width:1228px;margin:auto;padding:24px}section{background:var(--paper);border:1px solid var(--line);margin-bottom:22px;padding:24px;scroll-margin-top:16px}
+h2{font-size:20px;margin:0 0 16px}h3{font-size:16px;margin:18px 0 8px}.scope{border-left:4px solid var(--blue);padding:12px 16px;background:#edf3fc;margin:0 0 22px}
+.metrics,.states{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}.metric,.state{background:white;padding:14px}
+.metric strong,.state strong{display:block;font:26px/1.3 Consolas,monospace;color:var(--navy)}.caption{color:var(--muted);font-size:12px}.state{border-top:3px solid #6b809b}.verified{border-color:#377a62}.blocked{border-color:#b34646}.risk{border-color:#ac7723}.unknown{border-color:#5b74a2}.not_applicable{border-color:#85919d}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:12px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f5f7fa;color:#425672}code{font:12px/1.6 Consolas,'Microsoft YaHei',monospace;overflow-wrap:anywhere;word-break:break-word}.identifier{max-width:40ch}p,td,li,dd{overflow-wrap:anywhere}
+details.issue{margin:10px 0;border:1px solid var(--line);border-left:3px solid var(--blue);background:white}summary{cursor:pointer;padding:14px;line-height:1.6}summary b{color:var(--blue);margin-right:12px}.issue-body{padding:0 18px 16px}dl{display:grid;grid-template-columns:145px minmax(0,1fr);gap:8px 16px;margin:8px 0}dt{color:var(--muted)}dd{margin:0}.tag{font:12px Consolas,monospace;color:var(--muted);margin-right:12px}.empty{color:var(--muted)}footer{color:var(--muted);font-size:12px;padding:0 24px 32px;text-align:center}
+@media(max-width:720px){main{padding:12px}header{padding:24px 18px}section{padding:18px}h1{font-size:26px}.metrics,.states{grid-template-columns:repeat(2,minmax(0,1fr))}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:10px}nav{gap:14px}}
+@media print{body{background:white}header{background:white;color:var(--ink);padding:16px}header p,.brand,nav a{color:var(--ink)}main{padding:0}section{break-inside:avoid}nav{display:none}}</style></head><body>
+<header><div class="brand">WORKFLOW DOCTOR / OFFLINE REVIEW</div><h1>工作流迁移诊断报告</h1>
+<p>生成时间 / Generated: <time>2026-11-06T08:06:15+00:00</time></p><p>输入 / Input: tests\fixtures\valid.json</p>
+<nav aria-label="报告章节"><a href="#overview">诊断总览</a><a href="#workflows">工作流</a><a href="#dependencies">依赖</a><a href="#issues">检查明细</a><a href="#review">人工核查</a></nav></header><main>
+<p class="scope"><strong>目标环境兼容性：Unknown</strong> · 离线静态证据。集合内匹配不代表目标实例可导入或可运行。</p>
+<section id="overview"><h2>诊断总览 / Overview</h2><div class="metrics">
+<div class="metric"><span>扫描 JSON 文件</span><strong>1</strong><span class="caption">file_count</span></div>
+<div class="metric"><span>结构有效工作流</span><strong>1</strong><span class="caption">workflow_count</span></div>
+<div class="metric"><span>有效工作流节点</span><strong>2</strong><span class="caption">node_count</span></div>
+<div class="metric"><span>节点连接</span><strong>1</strong><span class="caption">connection_count</span></div>
+<div class="metric"><span>迁移提醒</span><strong>0</strong><span class="caption">risk_count</span></div>
+</div><h3>五类诊断状态 / Assessments</h3><div class="states">
+<div class="state verified"><span>集合内已验证</span><strong>0</strong><span class="caption">verified</span></div>
+<div class="state blocked"><span>静态分析阻断</span><strong>0</strong><span class="caption">blocked</span></div>
+<div class="state risk"><span>需要核查</span><strong>0</strong><span class="caption">risk</span></div>
+<div class="state unknown"><span>无法确认</span><strong>0</strong><span class="caption">unknown</span></div>
+<div class="state not_applicable"><span>不适用</span><strong>0</strong><span class="caption">not_applicable</span></div>
+</div><h3>全部计数 / Counts</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">指标 / Metric</th><th scope="col">数量 / Count</th></tr></thead><tbody><tr><td><code>file_count</code></td><td><code>1</code></td></tr><tr><td><code>error_count</code></td><td><code>0</code></td></tr><tr><td><code>skipped_count</code></td><td><code>0</code></td></tr><tr><td><code>structural_finding_count</code></td><td><code>0</code></td></tr><tr><td><code>workflow_count</code></td><td><code>1</code></td></tr><tr><td><code>node_count</code></td><td><code>2</code></td></tr><tr><td><code>connection_count</code></td><td><code>1</code></td></tr><tr><td><code>risk_count</code></td><td><code>0</code></td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th scope="col">严重等级 / Severity</th><th scope="col">检查数 / Checks</th></tr></thead><tbody><tr><td><code>error</code></td><td><code>0</code></td></tr><tr><td><code>warning</code></td><td><code>0</code></td></tr><tr><td><code>info</code></td><td><code>0</code></td></tr></tbody></table></div>
+<p>批次完成 / Complete: True。工作流与节点计数仅覆盖结构有效输入；状态数按检查项计数。</p></section>
+<p class="scope">本报告仅做结构扫描；完整依赖和迁移核查请使用 analyze 命令。</p>
+<section id="workflows"><h2>工作流列表 / Workflows</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">本地文件</th><th scope="col">工作流身份指纹</th><th scope="col">身份类型</th></tr></thead><tbody><tr><td><code>tests\fixtures\valid.json</code></td><td><code>None</code></td><td><code>not_analyzed</code></td></tr></tbody></table></div>
+</section><section id="dependencies"><h2>迁移依赖 / Dependencies</h2>
+<p class="empty">无记录 / No records</p>
+<h3>间接依赖 / Indirect dependencies</h3>
+<p class="empty">无记录 / No records</p>
+</section><section id="issues"><h2>检查明细 / Findings</h2>
+<p class="empty">已实现的检查未发现问题；兼容性仍未知。</p>
+<h3>输入错误 / Input errors</h3>
+<p class="empty">无记录 / No records</p>
+<h3>跳过的输入 / Skipped</h3>
+<p class="empty">无记录 / No records</p>
+</section><section id="review"><h2>人工核查 / Human review</h2>
+<p class="empty">无记录 / No records</p>
+</section><section><h2>免责声明与限制 / Scope</h2>
+<p>本工具不执行工作流，不连接 n8n，不验证真实凭证、资源、发布状态或运行权限。名称和参数原文默认省略；身份为指纹，本地路径仍可见。动态表达式、未知版本、第三方节点语义及真实导出兼容性仍需人工核查。</p>
+<p></p><p>Static structural checks only; compatibility is unknown, not proof of successful import or execution.</p></section></main><footer>n8n Workflow Doctor · 本地静态诊断 / Local static diagnostics</footer></body></html>

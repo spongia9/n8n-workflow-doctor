@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.0",
+  "workflow_dependencies": {
+    "directed": true,
+    "multigraph": true,
+    "nodes": [
+      {
+        "id": "workflow:sha256:f06c531ff4c0b38a0b100fbf4bf17beab9677b47794058a607046e5a010a6875",
+        "workflow_id": "workflow:sha256:f06c531ff4c0b38a0b100fbf4bf17beab9677b47794058a607046e5a010a6875",
+        "identity_kind": "n8n_id_fingerprint",
+        "identity_status": "unique",
+        "n8n_id_fingerprint": "workflow:sha256:f06c531ff4c0b38a0b100fbf4bf17beab9677b47794058a607046e5a010a6875",
+        "file": "examples\\sprint2\\workflows\\A.json",
+        "import_status": "Included"
+      },
+      {
+        "id": "workflow:sha256:e447185c597b15d0303d021852370286cca2e1b5e91e4e5ee5550e8d8fe02a41",
+        "workflow_id": "workflow:sha256:e447185c597b15d0303d021852370286cca2e1b5e91e4e5ee5550e8d8fe02a41",
+        "identity_kind": "n8n_id_fingerprint",
+        "identity_status": "unique",
+        "n8n_id_fingerprint": "workflow:sha256:e447185c597b15d0303d021852370286cca2e1b5e91e4e5ee5550e8d8fe02a41",
+        "file": "examples\\sprint2\\workflows\\B.json",
+        "import_status": "Included"
+      },
+      {
+        "id": "workflow:sha256:26357a9d02400629956f3979f39c404e96eb44320f20f67156e6560393669525",
+        "workflow_id": "workflow:sha256:26357a9d02400629956f3979f39c404e96eb44320f20f67156e6560393669525",
+        "identity_kind": "n8n_id_fingerprint",
+        "identity_status": "unique",
+        "n8n_id_fingerprint": "workflow:sha256:26357a9d02400629956f3979f39c404e96eb44320f20f67156e6560393669525",
+        "file": "examples\\sprint2\\workflows\\C.json",
+        "import_status": "Included"
+      },
+      {
+        "id": "workflow:sha256:d14d26a907fe1c69f9b504a191bd038c719bc7f2528eb33d3d0ccc0da55d2119",
+        "workflow_id": "workflow:sha256:d14d26a907fe1c69f9b504a191bd038c719bc7f2528eb33d3d0ccc0da55d2119",
+        "identity_kind": "n8n_id_fingerprint",
+        "identity_status": "unique",
+        "n8n_id_fingerprint": "workflow:sha256:d14d26a907fe1c69f9b504a191bd038c719bc7f2528eb33d3d0ccc0da55d2119",
+        "file": "examples\\sprint2\\workflows\\ERROR_HANDLER.json",
+        "import_status": "Included"
+      },
+      {
+        "id": "unresolved-workflow:sha256:cf7299ef59acfa5964656c972cc59a27ef0561807e8f0a910ff17762bf6eab1d",
+        "workflow_id": "unresolved-workflow:sha256:cf7299ef59acfa5964656c972cc59a27ef0561807e8f0a910ff17762bf6eab1d",
+        "identity_kind": "n8n_reference_fingerprint",
+        "import_status": "Missing From Import Set"
+      }
+    ],
+    "edges": [
+      {
+        "source": "workflow:sha256:f06c531ff4c0b38a0b100fbf4bf17beab9677b47794058a607046e5a010a6875",
+        "target": "workflow:sha256:d14d26a907fe1c69f9b504a191bd038c719bc7f2528eb33d3d0ccc0da55d2119",
+        "key": "dependency:0",
+        "kind": "error_workflow",
+        "dependency_id": "dependency:0",
+        "node_id": null,
+        "evidence_location": "$.settings.errorWorkflow",
+        "status": "Found In Import Set",
+        "confidence": "high"
+      },
+      {
+        "source": "workflow:sha256:f06c531ff4c0b38a0b100fbf4bf17beab9677b47794058a607046e5a010a6875",
+        "target": "workflow:sha256:e447185c597b15d0303d021852370286cca2e1b5e91e4e5ee5550e8d8fe02a41",
+        "key": "dependency:1",
+        "kind": "sub_workflow",
+        "dependency_id": "dependency:1",
+        "node_id": "node:sha256:cff1f7ecc7fe2249ca2ff0302419ab1e3ac86da70cbc90a0c6cffff0c9503b41",
+        "evidence_location": "$.nodes[2].parameters.workflowId.value",
+        "status": "Found In Import Set",
+        "confidence": "high"
+      },
+      {
+        "source": "workflow:sha256:e447185c597b15d0303d021852370286cca2e1b5e91e4e5ee5550e8d8fe02a41",
+        "target": "workflow:sha256:26357a9d02400629956f3979f39c404e96eb44320f20f67156e6560393669525",
+        "key": "dependency:8",
+        "kind": "sub_workflow",
+        "dependency_id": "dependency:8",
+        "node_id": "node:sha256:70f98b081448d81453cdcf5a89241dd1e96d76be089b115b5966adc002861bcc",
+        "evidence_location": "$.nodes[0].parameters.workflowId",
+        "status": "Found In Import Set",
+        "confidence": "high"
+      },
+      {
+        "source": "workflow:sha256:26357a9d02400629956f3979f39c404e96eb44320f20f67156e6560393669525",
+        "target": "workflow:sha256:f06c531ff4c0b38a0b100fbf4bf17beab9677b47794058a607046e5a010a6875",
+        "key": "dependency:11",
+        "kind": "sub_workflow",
+        "dependency_id": "dependency:11",
+        "node_id": "node:sha256:e9577d6099228a0fce3f90934cc27bfd5f39b0c383af583012bd4b8d4e865bb3",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "status": "Found In Import Set",
+        "confidence": "high"
+      },
+      {
+        "source": "workflow:sha256:26357a9d02400629956f3979f39c404e96eb44320f20f67156e6560393669525",
+        "target": "unresolved-workflow:sha256:cf7299ef59acfa5964656c972cc59a27ef0561807e8f0a910ff17762bf6eab1d",
+        "key": "dependency:12",
+        "kind": "sub_workflow",
+        "dependency_id": "dependency:12",
+        "node_id": "node:sha256:4ec10f076432640578a22718cdc97472490f881e94dc41b27d2312f79e96fea3",
+        "evidence_location": "$.nodes[1].parameters.workflowId.value",
+        "status": "Missing From Import Set",
+        "confidence": "high"
+      }
+    ],
+    "output_ports": [],
+    "cyclic_components": [
+      [
+        "workflow:sha256:26357a9d02400629956f3979f39c404e96eb44320f20f67156e6560393669525",
+        "workflow:sha256:e447185c597b15d0303d021852370286cca2e1b5e91e4e5ee5550e8d8fe02a41",
+        "workflow:sha256:f06c531ff4c0b38a0b100fbf4bf17beab9677b47794058a607046e5a010a6875"
+      ]
+    ],
+    "has_cycles": true
+  },
+  "node_graphs": [
+    {
+      "workflow_id": "workflow:sha256:f06c531ff4c0b38a0b100fbf4bf17beab9677b47794058a607046e5a010a6875",
+      "file": "examples\\sprint2\\workflows\\A.json",
+      "directed": true,
+      "multigraph": true,
+      "nodes": [
+        {
+          "id": "node:sha256:d333212a967c18ec01aec203ef08dc05f5cd4a19408ce17f8faa9e6d4cd1227b",
+          "node_id": "node:sha256:d333212a967c18ec01aec203ef08dc05f5cd4a19408ce17f8faa9e6d4cd1227b",
+          "node_index": 0,
+          "location": "$.nodes[0]"
+        },
+        {
+          "id": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "node_id": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "node_index": 1,
+          "location": "$.nodes[1]"
+        },
+        {
+          "id": "node:sha256:cff1f7ecc7fe2249ca2ff0302419ab1e3ac86da70cbc90a0c6cffff0c9503b41",
+          "node_id": "node:sha256:cff1f7ecc7fe2249ca2ff0302419ab1e3ac86da70cbc90a0c6cffff0c9503b41",
+          "node_index": 2,
+          "location": "$.nodes[2]"
+        },
+        {
+          "id": "node:sha256:c8e2fddd68f2eedd2e5d1f934cf3dd2bd8591b25f69c7485e0c0ef2137c53b06",
+          "node_id": "node:sha256:c8e2fddd68f2eedd2e5d1f934cf3dd2bd8591b25f69c7485e0c0ef2137c53b06",
+          "node_index": 3,
+          "location": "$.nodes[3]"
+        },
+        {
+          "id": "node:sha256:a628d4b63ffaefa30197033e6666bb03c933358fb1265684d1cbe94bd2dedd68",
+          "node_id": "node:sha256:a628d4b63ffaefa30197033e6666bb03c933358fb1265684d1cbe94bd2dedd68",
+          "node_index": 4,
+          "location": "$.nodes[4]"
+        },
+        {
+          "id": "node:sha256:450573160e73ca696a989b07b59f7c0916fd0205bbe4c6dee6ebddcae4cf4107",
+          "node_id": "node:sha256:450573160e73ca696a989b07b59f7c0916fd0205bbe4c6dee6ebddcae4cf4107",
+          "node_index": 5,
+          "location": "$.nodes[5]"
+        }
+      ],
+      "edges": [
+        {
+          "source": "node:sha256:d333212a967c18ec01aec203ef08dc05f5cd4a19408ce17f8faa9e6d4cd1227b",
+          "target": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "key": 0,
+          "source_type": "main",
+          "target_type": "main",
+          "output_index": 0,
+          "input_index": 0,
+          "location": "$.connections{source:0}{type:0}[0][0]"
+        },
+        {
+          "source": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "target": "node:sha256:cff1f7ecc7fe2249ca2ff0302419ab1e3ac86da70cbc90a0c6cffff0c9503b41",
+          "key": 1,
+          "source_type": "main",
+          "target_type": "main",
+          "output_index": 0,
+          "input_index": 0,
+          "location": "$.connections{source:1}{type:0}[0][0]"
+        },
+        {
+          "source": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "target": "node:sha256:a628d4b63ffaefa30197033e6666bb03c933358fb1265684d1cbe94bd2dedd68",
+          "key": 2,
+          "source_type": "main",
+          "target_type": "main",
+          "output_index": 0,
+          "input_index": 0,
+          "location": "$.connections{source:1}{type:0}[0][1]"
+        },
+        {
+          "source": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "target": "node:sha256:c8e2fddd68f2eedd2e5d1f934cf3dd2bd8591b25f69c7485e0c0ef2137c53b06",
+          "key": 3,
+          "source_type": "main",
+          "target_type": "main",
+          "output_index": 2,
+          "input_index": 0,
+          "location": "$.connections{source:1}{type:0}[2][0]"
+        },
+        {
+          "source": "node:sha256:a628d4b63ffaefa30197033e6666bb03c933358fb1265684d1cbe94bd2dedd68",
+          "target": "node:sha256:450573160e73ca696a989b07b59f7c0916fd0205bbe4c6dee6ebddcae4cf4107",
+          "key": 4,
+          "source_type": "main",
+          "target_type": "main",
+          "output_index": 0,
+          "input_index": 0,
+          "location": "$.connections{source:2}{type:0}[0][0]"
+        }
+      ],
+      "output_ports": [
+        {
+          "source": "node:sha256:d333212a967c18ec01aec203ef08dc05f5cd4a19408ce17f8faa9e6d4cd1227b",
+          "source_type": "main",
+          "output_index": 0,
+          "empty_form": null,
+          "location": "$.connections{source:0}{type:0}[0]"
+        },
+        {
+          "source": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "source_type": "main",
+          "output_index": 0,
+          "empty_form": null,
+          "location": "$.connections{source:1}{type:0}[0]"
+        },
+        {
+          "source": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "source_type": "main",
+          "output_index": 1,
+          "empty_form": "null",
+          "location": "$.connections{source:1}{type:0}[1]"
+        },
+        {
+          "source": "node:sha256:b0ab682601a51d31a34f2365614a62b7e16afeff0e037ae15c8ec641af52559d",
+          "source_type": "main",
+          "output_index": 2,
+          "empty_form": null,
+          "location": "$.connections{source:1}{type:0}[2]"
+        },
+        {
+          "source": "node:sha256:a628d4b63ffaefa30197033e6666bb03c933358fb1265684d1cbe94bd2dedd68",
+          "source_type": "main",
+          "output_index": 0,
+          "empty_form": null,
+          "location": "$.connections{source:2}{type:0}[0]"
+        }
+      ],
+      "cyclic_components": [],
+      "has_cycles": false
+    },
+    {
+      "workflow_id": "workflow:sha256:e447185c597b15d0303d021852370286cca2e1b5e91e4e5ee5550e8d8fe02a41",
+      "file": "examples\\sprint2\\workflows\\B.json",
+      "directed": true,
+      "multigraph": true,
+      "nodes": [
+        {
+          "id": "node:sha256:70f98b081448d81453cdcf5a89241dd1e96d76be089b115b5966adc002861bcc",
+          "node_id": "node:sha256:70f98b081448d81453cdcf5a89241dd1e96d76be089b115b5966adc002861bcc",
+          "node_index": 0,
+          "location": "$.nodes[0]"
+        },
+        {
+          "id": "node:sha256:1989824521ef1ae24368c024ea1d66441b50380a97ce553fb349e5fb9ad0440a",
+          "node_id": "node:sha256:1989824521ef1ae24368c024ea1d66441b50380a97ce553fb349e5fb9ad0440a",
+          "node_index": 1,
+          "location": "$.nodes[1]"
+        }
+      ],
+      "edges": [
+        {
+          "source": "node:sha256:70f98b081448d81453cdcf5a89241dd1e96d76be089b115b5966adc002861bcc",
+          "target": "node:sha256:1989824521ef1ae24368c024ea1d66441b50380a97ce553fb349e5fb9ad0440a",
+          "key": 0,
+          "source_type": "main",
+          "target_type": "main",
+          "output_index": 0,
+          "input_index": 0,
+          "location": "$.connections{source:0}{type:0}[0][0]"
+        }
+      ],
+      "output_ports": [
+        {
+          "source": "node:sha256:70f98b081448d81453cdcf5a89241dd1e96d76be089b115b5966adc002861bcc",
+          "source_type": "main",
+          "output_index": 0,
+          "empty_form": null,
+          "location": "$.connections{source:0}{type:0}[0]"
+        }
+      ],
+      "cyclic_components": [],
+      "has_cycles": false
+    },
+    {
+      "workflow_id": "workflow:sha256:26357a9d02400629956f3979f39c404e96eb44320f20f67156e6560393669525",
+      "file": "examples\\sprint2\\workflows\\C.json",
+      "directed": true,
+      "multigraph": true,
+      "nodes": [
+        {
+          "id": "node:sha256:e9577d6099228a0fce3f90934cc27bfd5f39b0c383af583012bd4b8d4e865bb3",
+          "node_id": "node:sha256:e9577d6099228a0fce3f90934cc27bfd5f39b0c383af583012bd4b8d4e865bb3",
+          "node_index": 0,
+          "location": "$.nodes[0]"
+        },
+        {
+          "id": "node:sha256:4ec10f076432640578a22718cdc97472490f881e94dc41b27d2312f79e96fea3",
+          "node_id": "node:sha256:4ec10f076432640578a22718cdc97472490f881e94dc41b27d2312f79e96fea3",
+          "node_index": 1,
+          "location": "$.nodes[1]"
+        },
+        {
+          "id": "node:sha256:9cc5d82e418cbebc539488a87b1ed2ee71697015ccd7f65c054becd92a497ed3",
+          "node_id": "node:sha256:9cc5d82e418cbebc539488a87b1ed2ee71697015ccd7f65c054becd92a497ed3",
+          "node_index": 2,
+          "location": "$.nodes[2]"
+        }
+      ],
+      "edges": [],
+      "output_ports": [],
+      "cyclic_components": [],
+      "has_cycles": false
+    },
+    {
+      "workflow_id": "workflow:sha256:d14d26a907fe1c69f9b504a191bd038c719bc7f2528eb33d3d0ccc0da55d2119",
+      "file": "examples\\sprint2\\workflows\\ERROR_HANDLER.json",
+      "directed": true,
+      "multigraph": true,
+      "nodes": [
+        {
+          "id": "node:sha256:f1649aa11b416faf15ed768f1778999361124054f0a93a538f8f61a397da6d9d",
+          "node_id": "node:sha256:f1649aa11b416faf15ed768f1778999361124054f0a93a538f8f61a397da6d9d",
+          "node_index": 0,
+          "location": "$.nodes[0]"
+        }
+      ],
+      "edges": [],
+      "output_ports": [],
+      "cyclic_components": [],
+      "has_cycles": false
+    }
+  ]
+}

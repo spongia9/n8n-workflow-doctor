@@ -1,0 +1,58 @@
+{
+  "id": "FORMAL_B",
+  "name": "Fabricated formal child",
+  "nodes": [
+    {
+      "id": "call-C",
+      "name": "call-C",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "FORMAL_C"
+        }
+      }
+    },
+    {
+      "id": "fetch-B",
+      "name": "fetch-B",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "url": "https://formal.example.invalid/status"
+      },
+      "credentials": {
+        "syntheticAuth": {
+          "id": "FORMAL_REFERENCE_ONLY",
+          "name": "Synthetic formal credential reference"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "call-C": {
+      "main": [
+        [
+          {
+            "node": "fetch-B",
+            "index": 0,
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "errorWorkflow": "DEFAULT"
+  }
+}

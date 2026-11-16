@@ -1,0 +1,55 @@
+{
+  "id": "C",
+  "name": "Synthetic cyclic and unresolved calls",
+  "nodes": [
+    {
+      "id": "C-call-A",
+      "name": "Call A",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "A"
+        }
+      }
+    },
+    {
+      "id": "C-missing",
+      "name": "Missing Call",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "NOT_IN_BATCH"
+        }
+      }
+    },
+    {
+      "id": "C-future",
+      "name": "Future Version",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 99,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": "B"
+      }
+    }
+  ],
+  "connections": {},
+  "settings": {}
+}

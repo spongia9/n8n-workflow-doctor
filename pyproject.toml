@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "n8n-workflow-doctor"
+version = "0.1.0"
+description = "Offline-first n8n workflow JSON and ZIP structural diagnostics"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12,<3.13"
+dependencies = ["networkx>=3.7,<4"]
+
+[project.optional-dependencies]
+api = [
+    "fastapi==0.162.0",
+    "starlette==1.10.0",
+    "pydantic==2.14.3",
+    "python-multipart==0.0.33",
+    "uvicorn==0.54.0",
+]
+test = ["httpx2==2.16.0"]
+
+[project.scripts]
+workflow-doctor = "workflow_doctor.cli:main"
+workflow-doctor-api = "workflow_doctor.api.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"workflow_doctor.api" = ["assets/*"]

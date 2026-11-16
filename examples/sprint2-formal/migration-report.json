@@ -1,0 +1,1891 @@
+{
+  "schema_version": "0.2",
+  "input": "examples\\sprint2-formal\\workflows",
+  "file_count": 4,
+  "finding_count": 0,
+  "error_count": 0,
+  "skipped_count": 0,
+  "complete": true,
+  "results": [
+    {
+      "file": "examples\\sprint2-formal\\workflows\\A.json",
+      "workflow_name": null,
+      "structure_status": "passed",
+      "compatibility": "unknown",
+      "findings": []
+    },
+    {
+      "file": "examples\\sprint2-formal\\workflows\\B.json",
+      "workflow_name": null,
+      "structure_status": "passed",
+      "compatibility": "unknown",
+      "findings": []
+    },
+    {
+      "file": "examples\\sprint2-formal\\workflows\\C.json",
+      "workflow_name": null,
+      "structure_status": "passed",
+      "compatibility": "unknown",
+      "findings": []
+    },
+    {
+      "file": "examples\\sprint2-formal\\workflows\\ERROR_HANDLER.json",
+      "workflow_name": null,
+      "structure_status": "passed",
+      "compatibility": "unknown",
+      "findings": []
+    }
+  ],
+  "skipped": [],
+  "errors": [],
+  "notice": "Static structural checks only; compatibility is unknown, not proof of successful import or execution.",
+  "analysis": {
+    "schema_version": "1.1",
+    "compatibility": "unknown",
+    "identity_policy": "Stable fingerprints of n8n IDs; explicitly temporary file fingerprints when unavailable or ambiguous",
+    "coverage": "structurally_valid_import_set",
+    "summary": {
+      "workflow_count": 4,
+      "excluded_file_count": 0,
+      "node_count": 13,
+      "connection_count": 6,
+      "dependency_count": 17,
+      "static_dependency_count": 13,
+      "unknown_dependency_count": 4,
+      "missing_resource_count": 1,
+      "risk_count": 17,
+      "manual_review_count": 18,
+      "direct_dependency_count": 5,
+      "indirect_dependency_count": 7,
+      "blocking_issue_count": 0,
+      "check_count": 20
+    },
+    "workflows": [
+      {
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "identity_kind": "n8n_id_fingerprint",
+        "identity_status": "unique",
+        "n8n_id_fingerprint": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json"
+      },
+      {
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "identity_kind": "n8n_id_fingerprint",
+        "identity_status": "unique",
+        "n8n_id_fingerprint": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "file": "examples\\sprint2-formal\\workflows\\B.json"
+      },
+      {
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "identity_kind": "n8n_id_fingerprint",
+        "identity_status": "unique",
+        "n8n_id_fingerprint": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "file": "examples\\sprint2-formal\\workflows\\C.json"
+      },
+      {
+        "workflow_id": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+        "identity_kind": "n8n_id_fingerprint",
+        "identity_status": "unique",
+        "n8n_id_fingerprint": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+        "file": "examples\\sprint2-formal\\workflows\\ERROR_HANDLER.json"
+      }
+    ],
+    "excluded_files": [],
+    "dependencies": [
+      {
+        "id": "dependency:0",
+        "kind": "error_workflow",
+        "evidence_location": "$.settings.errorWorkflow",
+        "node_id": null,
+        "reference_fingerprint": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+        "reference_form": "id",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+        "source_kind": null,
+        "assessment": "verified",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:1",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[1].parameters.workflowId",
+        "node_id": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+        "reference_fingerprint": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "reference_form": "id",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "source_kind": "database",
+        "assessment": "verified",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:2",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[2].parameters.workflowId.value",
+        "node_id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+        "reference_fingerprint": "workflow:sha256:263fbf74b48f7e98d94248d38c2ebfe2eea1b90bf7111bbe6b66f7e1d339697d",
+        "reference_form": "resource_locator",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Missing From Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": "unresolved-workflow:sha256:6482a57d52af81b4459efb535f4caad13ec595c275da6554a218e82c658d9148",
+        "source_kind": "database",
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:3",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[3].parameters.workflowId.value",
+        "node_id": "node:sha256:a982a1c374fa06b7577d04ae9ed15d9a469a00f8cc28e225a10a755a21c10a07",
+        "reference_fingerprint": null,
+        "reference_form": "dynamic_expression",
+        "reason": "Workflow reference requires runtime evaluation",
+        "confidence": "low",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": "database",
+        "assessment": "unknown",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:4",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "reference_fingerprint": null,
+        "reference_form": "local_file",
+        "reason": "File-sourced workflow is not a database ID; file content was not read",
+        "confidence": "low",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": "local_file",
+        "assessment": "unknown",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:5",
+        "kind": "local_path",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "reference_fingerprint": "local-path:sha256:726633b5396cdd21846212b9aca7f05052b6f00d7cb815f2607f31aadb657e4b",
+        "reference_form": "relative_workflow_file",
+        "reason": "Explicit workflow file dependency; no file was read",
+        "confidence": "high",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:6",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[5].parameters.workflowJson",
+        "node_id": "node:sha256:b6b78d48751773011eaaa765090f5b5e031705a6bc8888ce7fd40365140d299d",
+        "reference_fingerprint": null,
+        "reference_form": "embedded_workflow",
+        "reason": "Parameterized workflow is not a database ID; embedded content was not evaluated",
+        "confidence": "low",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": "parameter",
+        "assessment": "unknown",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:7",
+        "kind": "credential",
+        "evidence_location": "$.nodes[6].credentials{member:0}.id",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "reference_fingerprint": "credential:sha256:aaf54f2ec0f3086ed057999e82e7cfbfb581a40f49c821d6f4fd648fd452e447",
+        "reference_form": "credential_id",
+        "reason": "Credential ID reference extracted; destination mapping is unverified",
+        "confidence": "high",
+        "status": "Requires Reconfiguration",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": {
+          "type_fingerprint": "credential-type:sha256:e293aa42bc87ad93de9d55ca0db3848acfeb3f93a99f4c76eef56c20f30042e8",
+          "id_fingerprint": "credential:sha256:aaf54f2ec0f3086ed057999e82e7cfbfb581a40f49c821d6f4fd648fd452e447",
+          "name_fingerprint": "credential-name:sha256:dc2039a37f044d8376c5d9a8977d249940b8139b9071c954ff92fc20521edf5c",
+          "name_present": true,
+          "id_present": true
+        }
+      },
+      {
+        "id": "dependency:8",
+        "kind": "external_service",
+        "evidence_location": "$.nodes[6].parameters{member:0}",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "reference_fingerprint": "service-origin:sha256:045ff3f6746526c63cebf386b3b65473d36fef229189620984ace20e7674548f",
+        "reference_form": "http_origin",
+        "reason": "Static service origin found; access and shared-state semantics are unverified",
+        "confidence": "medium",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:9",
+        "kind": "n8n_variable",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "reference_fingerprint": "n8n_variable:sha256:b56598287b06bbf62c24dda0b368a5b1c36677a22d705446602dd96262157873",
+        "reference_form": "static_symbol",
+        "reason": "Lexical variable access found; availability and value are unverified",
+        "confidence": "medium",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:10",
+        "kind": "environment_variable",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "reference_fingerprint": "environment_variable:sha256:8ee12c6cf43bdb18900d0ceab1f91a2b084293424dcbd83c7491457edec36fb2",
+        "reference_form": "static_symbol",
+        "reason": "Lexical variable access found; availability and value are unverified",
+        "confidence": "medium",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:11",
+        "kind": "local_path",
+        "evidence_location": "$.nodes[6].parameters{member:3}",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "reference_fingerprint": "local-path:sha256:ed216b4e4de81b1e02e4e86c2cdbc258f09def7ca843490bc055ef958971e0b9",
+        "reference_form": "posix_absolute",
+        "reason": "Absolute path literal found; destination filesystem was not inspected",
+        "confidence": "medium",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:12",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "node_id": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+        "reference_fingerprint": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "reference_form": "resource_locator",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "target_workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "source_kind": "database",
+        "assessment": "verified",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:13",
+        "kind": "credential",
+        "evidence_location": "$.nodes[1].credentials{member:0}.id",
+        "node_id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+        "reference_fingerprint": "credential:sha256:aaf54f2ec0f3086ed057999e82e7cfbfb581a40f49c821d6f4fd648fd452e447",
+        "reference_form": "credential_id",
+        "reason": "Credential ID reference extracted; destination mapping is unverified",
+        "confidence": "high",
+        "status": "Requires Reconfiguration",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": {
+          "type_fingerprint": "credential-type:sha256:e293aa42bc87ad93de9d55ca0db3848acfeb3f93a99f4c76eef56c20f30042e8",
+          "id_fingerprint": "credential:sha256:aaf54f2ec0f3086ed057999e82e7cfbfb581a40f49c821d6f4fd648fd452e447",
+          "name_fingerprint": "credential-name:sha256:dc2039a37f044d8376c5d9a8977d249940b8139b9071c954ff92fc20521edf5c",
+          "name_present": true,
+          "id_present": true
+        }
+      },
+      {
+        "id": "dependency:14",
+        "kind": "external_service",
+        "evidence_location": "$.nodes[1].parameters{member:0}",
+        "node_id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+        "reference_fingerprint": "service-origin:sha256:045ff3f6746526c63cebf386b3b65473d36fef229189620984ace20e7674548f",
+        "reference_form": "http_origin",
+        "reason": "Static service origin found; access and shared-state semantics are unverified",
+        "confidence": "medium",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:15",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "node_id": "node:sha256:269884f51665e95cd75c1d55f2fa4e6e5b128cd23fb7f5f9aef2edc1060bc5ea",
+        "reference_fingerprint": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "reference_form": "resource_locator",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "target_workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "source_kind": "database",
+        "assessment": "verified",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:16",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[1].typeVersion",
+        "node_id": "node:sha256:6b4d7bb0446154030590382e4db3ec7a6f42ab1b74c51b1e2fa2911f7b06f048",
+        "reference_fingerprint": null,
+        "reference_form": "unsupported_version",
+        "reason": "Node version is not covered by a registered workflow-call adapter",
+        "confidence": "low",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "target_workflow_id": null,
+        "source_kind": "database",
+        "assessment": "unknown",
+        "credential_reference": null
+      }
+    ],
+    "unknown_dependencies": [
+      {
+        "id": "dependency:3",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[3].parameters.workflowId.value",
+        "node_id": "node:sha256:a982a1c374fa06b7577d04ae9ed15d9a469a00f8cc28e225a10a755a21c10a07",
+        "reference_fingerprint": null,
+        "reference_form": "dynamic_expression",
+        "reason": "Workflow reference requires runtime evaluation",
+        "confidence": "low",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": "database",
+        "assessment": "unknown",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:4",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "reference_fingerprint": null,
+        "reference_form": "local_file",
+        "reason": "File-sourced workflow is not a database ID; file content was not read",
+        "confidence": "low",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": "local_file",
+        "assessment": "unknown",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:6",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[5].parameters.workflowJson",
+        "node_id": "node:sha256:b6b78d48751773011eaaa765090f5b5e031705a6bc8888ce7fd40365140d299d",
+        "reference_fingerprint": null,
+        "reference_form": "embedded_workflow",
+        "reason": "Parameterized workflow is not a database ID; embedded content was not evaluated",
+        "confidence": "low",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": "parameter",
+        "assessment": "unknown",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:16",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[1].typeVersion",
+        "node_id": "node:sha256:6b4d7bb0446154030590382e4db3ec7a6f42ab1b74c51b1e2fa2911f7b06f048",
+        "reference_fingerprint": null,
+        "reference_form": "unsupported_version",
+        "reason": "Node version is not covered by a registered workflow-call adapter",
+        "confidence": "low",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "target_workflow_id": null,
+        "source_kind": "database",
+        "assessment": "unknown",
+        "credential_reference": null
+      }
+    ],
+    "missing_resources": [
+      {
+        "id": "dependency:2",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[2].parameters.workflowId.value",
+        "node_id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+        "reference_fingerprint": "workflow:sha256:263fbf74b48f7e98d94248d38c2ebfe2eea1b90bf7111bbe6b66f7e1d339697d",
+        "reference_form": "resource_locator",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Missing From Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": "unresolved-workflow:sha256:6482a57d52af81b4459efb535f4caad13ec595c275da6554a218e82c658d9148",
+        "source_kind": "database",
+        "assessment": "risk",
+        "credential_reference": null
+      }
+    ],
+    "risks": [
+      {
+        "rule_id": "WF009",
+        "severity": "info",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": null,
+        "evidence_location": "$.settings.errorWorkflow",
+        "message": "Error Workflow reference requires migration review",
+        "recommendation": "Map the error workflow after import and verify its Error Trigger and permissions manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:0"
+        ],
+        "assessment": "verified",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "info",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+        "evidence_location": "$.nodes[1].parameters.workflowId",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:1"
+        ],
+        "assessment": "verified",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Missing From Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+        "evidence_location": "$.nodes[2].parameters.workflowId.value",
+        "message": "Sub-workflow dependency requires migration review: Missing From Import Set; destination existence is unknown",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:2"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:a982a1c374fa06b7577d04ae9ed15d9a469a00f8cc28e225a10a755a21c10a07",
+        "evidence_location": "$.nodes[3].parameters.workflowId.value",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "low",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:3"
+        ],
+        "assessment": "unknown",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "low",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:4"
+        ],
+        "assessment": "unknown",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF013",
+        "severity": "warning",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "message": "Local filesystem dependency requires review",
+        "recommendation": "Review destination mounts, file availability and permissions; do not read the path during analysis.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:5"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:b6b78d48751773011eaaa765090f5b5e031705a6bc8888ce7fd40365140d299d",
+        "evidence_location": "$.nodes[5].parameters.workflowJson",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "low",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:6"
+        ],
+        "assessment": "unknown",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF010",
+        "severity": "warning",
+        "status": "Requires Reconfiguration",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].credentials{member:0}.id",
+        "message": "Credential reference requires reconfiguration",
+        "recommendation": "Recreate or securely map credentials on the destination; verify permissions without disclosing secrets.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:7"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF012",
+        "severity": "warning",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "message": "n8n variable dependency requires review",
+        "recommendation": "Provision the n8n variable and verify feature availability and environment scope manually.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:9"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF012",
+        "severity": "warning",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "message": "Environment variable dependency requires review",
+        "recommendation": "Provision the required environment variable and check access policy; never copy its value into the report.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:10"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF013",
+        "severity": "warning",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].parameters{member:3}",
+        "message": "Local filesystem dependency requires review",
+        "recommendation": "Review destination mounts, file availability and permissions; do not read the path during analysis.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:11"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "info",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "node_id": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "dependency_ids": [
+          "dependency:12"
+        ],
+        "assessment": "verified",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF010",
+        "severity": "warning",
+        "status": "Requires Reconfiguration",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "node_id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+        "evidence_location": "$.nodes[1].credentials{member:0}.id",
+        "message": "Credential reference requires reconfiguration",
+        "recommendation": "Recreate or securely map credentials on the destination; verify permissions without disclosing secrets.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "dependency_ids": [
+          "dependency:13"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "info",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "node_id": "node:sha256:269884f51665e95cd75c1d55f2fa4e6e5b128cd23fb7f5f9aef2edc1060bc5ea",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "dependency_ids": [
+          "dependency:15"
+        ],
+        "assessment": "verified",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "node_id": "node:sha256:6b4d7bb0446154030590382e4db3ec7a6f42ab1b74c51b1e2fa2911f7b06f048",
+        "evidence_location": "$.nodes[1].typeVersion",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "low",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "dependency_ids": [
+          "dependency:16"
+        ],
+        "assessment": "unknown",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF018",
+        "severity": "info",
+        "status": "Shared Resource Reference",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].credentials{member:0}.id",
+        "message": "Multiple nodes reference the same external resource identity; shared state is unverified",
+        "recommendation": "Review all linked references for shared quotas, ownership, state and migration sequencing.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:7",
+          "dependency:13"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF018",
+        "severity": "info",
+        "status": "Shared Resource Reference",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].parameters{member:0}",
+        "message": "Multiple nodes reference the same external resource identity; shared state is unverified",
+        "recommendation": "Review all linked references for shared quotas, ownership, state and migration sequencing.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:8",
+          "dependency:14"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      }
+    ],
+    "indirect_dependencies": [
+      {
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "targets": [
+          "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30"
+        ]
+      },
+      {
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "targets": [
+          "unresolved-workflow:sha256:6482a57d52af81b4459efb535f4caad13ec595c275da6554a218e82c658d9148",
+          "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+          "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952"
+        ]
+      },
+      {
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "targets": [
+          "unresolved-workflow:sha256:6482a57d52af81b4459efb535f4caad13ec595c275da6554a218e82c658d9148",
+          "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+          "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03"
+        ]
+      }
+    ],
+    "direct_dependencies": [
+      {
+        "id": "dependency:0",
+        "kind": "error_workflow",
+        "evidence_location": "$.settings.errorWorkflow",
+        "node_id": null,
+        "reference_fingerprint": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+        "reference_form": "id",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+        "source_kind": null,
+        "assessment": "verified",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:1",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[1].parameters.workflowId",
+        "node_id": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+        "reference_fingerprint": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "reference_form": "id",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "source_kind": "database",
+        "assessment": "verified",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:2",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[2].parameters.workflowId.value",
+        "node_id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+        "reference_fingerprint": "workflow:sha256:263fbf74b48f7e98d94248d38c2ebfe2eea1b90bf7111bbe6b66f7e1d339697d",
+        "reference_form": "resource_locator",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Missing From Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": "unresolved-workflow:sha256:6482a57d52af81b4459efb535f4caad13ec595c275da6554a218e82c658d9148",
+        "source_kind": "database",
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:12",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "node_id": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+        "reference_fingerprint": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "reference_form": "resource_locator",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "target_workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "source_kind": "database",
+        "assessment": "verified",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:15",
+        "kind": "sub_workflow",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "node_id": "node:sha256:269884f51665e95cd75c1d55f2fa4e6e5b128cd23fb7f5f9aef2edc1060bc5ea",
+        "reference_fingerprint": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "reference_form": "resource_locator",
+        "reason": "Static workflow ID extracted",
+        "confidence": "high",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "target_workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "source_kind": "database",
+        "assessment": "verified",
+        "credential_reference": null
+      }
+    ],
+    "credential_checklist": [
+      {
+        "id": "dependency:7",
+        "kind": "credential",
+        "evidence_location": "$.nodes[6].credentials{member:0}.id",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "reference_fingerprint": "credential:sha256:aaf54f2ec0f3086ed057999e82e7cfbfb581a40f49c821d6f4fd648fd452e447",
+        "reference_form": "credential_id",
+        "reason": "Credential ID reference extracted; destination mapping is unverified",
+        "confidence": "high",
+        "status": "Requires Reconfiguration",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": {
+          "type_fingerprint": "credential-type:sha256:e293aa42bc87ad93de9d55ca0db3848acfeb3f93a99f4c76eef56c20f30042e8",
+          "id_fingerprint": "credential:sha256:aaf54f2ec0f3086ed057999e82e7cfbfb581a40f49c821d6f4fd648fd452e447",
+          "name_fingerprint": "credential-name:sha256:dc2039a37f044d8376c5d9a8977d249940b8139b9071c954ff92fc20521edf5c",
+          "name_present": true,
+          "id_present": true
+        }
+      },
+      {
+        "id": "dependency:13",
+        "kind": "credential",
+        "evidence_location": "$.nodes[1].credentials{member:0}.id",
+        "node_id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+        "reference_fingerprint": "credential:sha256:aaf54f2ec0f3086ed057999e82e7cfbfb581a40f49c821d6f4fd648fd452e447",
+        "reference_form": "credential_id",
+        "reason": "Credential ID reference extracted; destination mapping is unverified",
+        "confidence": "high",
+        "status": "Requires Reconfiguration",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": {
+          "type_fingerprint": "credential-type:sha256:e293aa42bc87ad93de9d55ca0db3848acfeb3f93a99f4c76eef56c20f30042e8",
+          "id_fingerprint": "credential:sha256:aaf54f2ec0f3086ed057999e82e7cfbfb581a40f49c821d6f4fd648fd452e447",
+          "name_fingerprint": "credential-name:sha256:dc2039a37f044d8376c5d9a8977d249940b8139b9071c954ff92fc20521edf5c",
+          "name_present": true,
+          "id_present": true
+        }
+      }
+    ],
+    "variable_checklist": [
+      {
+        "id": "dependency:9",
+        "kind": "n8n_variable",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "reference_fingerprint": "n8n_variable:sha256:b56598287b06bbf62c24dda0b368a5b1c36677a22d705446602dd96262157873",
+        "reference_form": "static_symbol",
+        "reason": "Lexical variable access found; availability and value are unverified",
+        "confidence": "medium",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": null
+      },
+      {
+        "id": "dependency:10",
+        "kind": "environment_variable",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "reference_fingerprint": "environment_variable:sha256:8ee12c6cf43bdb18900d0ceab1f91a2b084293424dcbd83c7491457edec36fb2",
+        "reference_form": "static_symbol",
+        "reason": "Lexical variable access found; availability and value are unverified",
+        "confidence": "medium",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "target_workflow_id": null,
+        "source_kind": null,
+        "assessment": "risk",
+        "credential_reference": null
+      }
+    ],
+    "blocking_issues": [],
+    "checks": [
+      {
+        "rule_id": "WF009",
+        "severity": "info",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": null,
+        "evidence_location": "$.settings.errorWorkflow",
+        "message": "Error Workflow reference requires migration review",
+        "recommendation": "Map the error workflow after import and verify its Error Trigger and permissions manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:0"
+        ],
+        "assessment": "verified",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "info",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+        "evidence_location": "$.nodes[1].parameters.workflowId",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:1"
+        ],
+        "assessment": "verified",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Missing From Import Set",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+        "evidence_location": "$.nodes[2].parameters.workflowId.value",
+        "message": "Sub-workflow dependency requires migration review: Missing From Import Set; destination existence is unknown",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:2"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:a982a1c374fa06b7577d04ae9ed15d9a469a00f8cc28e225a10a755a21c10a07",
+        "evidence_location": "$.nodes[3].parameters.workflowId.value",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "low",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:3"
+        ],
+        "assessment": "unknown",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "low",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:4"
+        ],
+        "assessment": "unknown",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF013",
+        "severity": "warning",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "message": "Local filesystem dependency requires review",
+        "recommendation": "Review destination mounts, file availability and permissions; do not read the path during analysis.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:5"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:b6b78d48751773011eaaa765090f5b5e031705a6bc8888ce7fd40365140d299d",
+        "evidence_location": "$.nodes[5].parameters.workflowJson",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "low",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:6"
+        ],
+        "assessment": "unknown",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF010",
+        "severity": "warning",
+        "status": "Requires Reconfiguration",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].credentials{member:0}.id",
+        "message": "Credential reference requires reconfiguration",
+        "recommendation": "Recreate or securely map credentials on the destination; verify permissions without disclosing secrets.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:7"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF012",
+        "severity": "warning",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "message": "n8n variable dependency requires review",
+        "recommendation": "Provision the n8n variable and verify feature availability and environment scope manually.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:9"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF012",
+        "severity": "warning",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "message": "Environment variable dependency requires review",
+        "recommendation": "Provision the required environment variable and check access policy; never copy its value into the report.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:10"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF013",
+        "severity": "warning",
+        "status": "Requires Review",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].parameters{member:3}",
+        "message": "Local filesystem dependency requires review",
+        "recommendation": "Review destination mounts, file availability and permissions; do not read the path during analysis.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:11"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "info",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "node_id": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "dependency_ids": [
+          "dependency:12"
+        ],
+        "assessment": "verified",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF010",
+        "severity": "warning",
+        "status": "Requires Reconfiguration",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "node_id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+        "evidence_location": "$.nodes[1].credentials{member:0}.id",
+        "message": "Credential reference requires reconfiguration",
+        "recommendation": "Recreate or securely map credentials on the destination; verify permissions without disclosing secrets.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "dependency_ids": [
+          "dependency:13"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "info",
+        "status": "Found In Import Set",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "node_id": "node:sha256:269884f51665e95cd75c1d55f2fa4e6e5b128cd23fb7f5f9aef2edc1060bc5ea",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "dependency_ids": [
+          "dependency:15"
+        ],
+        "assessment": "verified",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF008",
+        "severity": "warning",
+        "status": "Unknown",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "node_id": "node:sha256:6b4d7bb0446154030590382e4db3ec7a6f42ab1b74c51b1e2fa2911f7b06f048",
+        "evidence_location": "$.nodes[1].typeVersion",
+        "message": "Sub-workflow dependency requires migration review",
+        "recommendation": "Map the workflow ID after import; check caller permissions, inputs and publication state manually.",
+        "confidence": "low",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "dependency_ids": [
+          "dependency:16"
+        ],
+        "assessment": "unknown",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF018",
+        "severity": "info",
+        "status": "Shared Resource Reference",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].credentials{member:0}.id",
+        "message": "Multiple nodes reference the same external resource identity; shared state is unverified",
+        "recommendation": "Review all linked references for shared quotas, ownership, state and migration sequencing.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:7",
+          "dependency:13"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF018",
+        "severity": "info",
+        "status": "Shared Resource Reference",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "evidence_location": "$.nodes[6].parameters{member:0}",
+        "message": "Multiple nodes reference the same external resource identity; shared state is unverified",
+        "recommendation": "Review all linked references for shared quotas, ownership, state and migration sequencing.",
+        "confidence": "medium",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "dependency_ids": [
+          "dependency:8",
+          "dependency:14"
+        ],
+        "assessment": "risk",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF009",
+        "severity": "info",
+        "status": "Not Applicable",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "node_id": null,
+        "evidence_location": "$.settings.errorWorkflow",
+        "message": "No explicit external Error Workflow is configured",
+        "recommendation": "No external Error Workflow ID mapping is applicable to this setting.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "dependency_ids": [],
+        "assessment": "not_applicable",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF009",
+        "severity": "info",
+        "status": "Not Applicable",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "node_id": null,
+        "evidence_location": "$.settings.errorWorkflow",
+        "message": "No explicit external Error Workflow is configured",
+        "recommendation": "No external Error Workflow ID mapping is applicable to this setting.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "dependency_ids": [],
+        "assessment": "not_applicable",
+        "verification_scope": "static_input_only"
+      },
+      {
+        "rule_id": "WF009",
+        "severity": "info",
+        "status": "Not Applicable",
+        "workflow_id": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+        "node_id": null,
+        "evidence_location": "$.settings.errorWorkflow",
+        "message": "No explicit external Error Workflow is configured",
+        "recommendation": "No external Error Workflow ID mapping is applicable to this setting.",
+        "confidence": "high",
+        "file": "examples\\sprint2-formal\\workflows\\ERROR_HANDLER.json",
+        "dependency_ids": [],
+        "assessment": "not_applicable",
+        "verification_scope": "static_input_only"
+      }
+    ],
+    "assessment_counts": {
+      "verified": 4,
+      "blocked": 0,
+      "risk": 9,
+      "unknown": 4,
+      "not_applicable": 3
+    },
+    "manual_review_items": [
+      {
+        "code": "WORKFLOW_CYCLE_REVIEW",
+        "workflow_id": null,
+        "evidence_location": "$",
+        "status": "Informational",
+        "message": "Workflow references contain a cycle; review intended recursion and termination without assuming an error."
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:0",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": null,
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.settings.errorWorkflow",
+        "status": "Found In Import Set",
+        "message": "Static workflow ID extracted"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:1",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[1].parameters.workflowId",
+        "status": "Found In Import Set",
+        "message": "Static workflow ID extracted"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:2",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[2].parameters.workflowId.value",
+        "status": "Missing From Import Set",
+        "message": "Static workflow ID extracted"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:3",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:a982a1c374fa06b7577d04ae9ed15d9a469a00f8cc28e225a10a755a21c10a07",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[3].parameters.workflowId.value",
+        "status": "Unknown",
+        "message": "Workflow reference requires runtime evaluation"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:4",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "status": "Unknown",
+        "message": "File-sourced workflow is not a database ID; file content was not read"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:5",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[4].parameters.workflowPath",
+        "status": "Requires Review",
+        "message": "Explicit workflow file dependency; no file was read"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:6",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:b6b78d48751773011eaaa765090f5b5e031705a6bc8888ce7fd40365140d299d",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[5].parameters.workflowJson",
+        "status": "Unknown",
+        "message": "Parameterized workflow is not a database ID; embedded content was not evaluated"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:7",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[6].credentials{member:0}.id",
+        "status": "Requires Reconfiguration",
+        "message": "Credential ID reference extracted; destination mapping is unverified"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:8",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[6].parameters{member:0}",
+        "status": "Requires Review",
+        "message": "Static service origin found; access and shared-state semantics are unverified"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:9",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "status": "Requires Review",
+        "message": "Lexical variable access found; availability and value are unverified"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:10",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[6].parameters{member:2}",
+        "status": "Requires Review",
+        "message": "Lexical variable access found; availability and value are unverified"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:11",
+        "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+        "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+        "file": "examples\\sprint2-formal\\workflows\\A.json",
+        "evidence_location": "$.nodes[6].parameters{member:3}",
+        "status": "Requires Review",
+        "message": "Absolute path literal found; destination filesystem was not inspected"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:12",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "node_id": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "status": "Found In Import Set",
+        "message": "Static workflow ID extracted"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:13",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "node_id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "evidence_location": "$.nodes[1].credentials{member:0}.id",
+        "status": "Requires Reconfiguration",
+        "message": "Credential ID reference extracted; destination mapping is unverified"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:14",
+        "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+        "node_id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+        "file": "examples\\sprint2-formal\\workflows\\B.json",
+        "evidence_location": "$.nodes[1].parameters{member:0}",
+        "status": "Requires Review",
+        "message": "Static service origin found; access and shared-state semantics are unverified"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:15",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "node_id": "node:sha256:269884f51665e95cd75c1d55f2fa4e6e5b128cd23fb7f5f9aef2edc1060bc5ea",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "evidence_location": "$.nodes[0].parameters.workflowId.value",
+        "status": "Found In Import Set",
+        "message": "Static workflow ID extracted"
+      },
+      {
+        "code": "DEPENDENCY_REVIEW",
+        "dependency_id": "dependency:16",
+        "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+        "node_id": "node:sha256:6b4d7bb0446154030590382e4db3ec7a6f42ab1b74c51b1e2fa2911f7b06f048",
+        "file": "examples\\sprint2-formal\\workflows\\C.json",
+        "evidence_location": "$.nodes[1].typeVersion",
+        "status": "Unknown",
+        "message": "Node version is not covered by a registered workflow-call adapter"
+      }
+    ],
+    "graphs": {
+      "schema_version": "1.1",
+      "workflow_dependencies": {
+        "directed": true,
+        "multigraph": true,
+        "nodes": [
+          {
+            "id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+            "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+            "identity_kind": "n8n_id_fingerprint",
+            "identity_status": "unique",
+            "n8n_id_fingerprint": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+            "file": "examples\\sprint2-formal\\workflows\\A.json",
+            "import_status": "Included"
+          },
+          {
+            "id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+            "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+            "identity_kind": "n8n_id_fingerprint",
+            "identity_status": "unique",
+            "n8n_id_fingerprint": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+            "file": "examples\\sprint2-formal\\workflows\\B.json",
+            "import_status": "Included"
+          },
+          {
+            "id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+            "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+            "identity_kind": "n8n_id_fingerprint",
+            "identity_status": "unique",
+            "n8n_id_fingerprint": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+            "file": "examples\\sprint2-formal\\workflows\\C.json",
+            "import_status": "Included"
+          },
+          {
+            "id": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+            "workflow_id": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+            "identity_kind": "n8n_id_fingerprint",
+            "identity_status": "unique",
+            "n8n_id_fingerprint": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+            "file": "examples\\sprint2-formal\\workflows\\ERROR_HANDLER.json",
+            "import_status": "Included"
+          },
+          {
+            "id": "unresolved-workflow:sha256:6482a57d52af81b4459efb535f4caad13ec595c275da6554a218e82c658d9148",
+            "workflow_id": "unresolved-workflow:sha256:6482a57d52af81b4459efb535f4caad13ec595c275da6554a218e82c658d9148",
+            "identity_kind": "n8n_reference_fingerprint",
+            "import_status": "Missing From Import Set"
+          }
+        ],
+        "edges": [
+          {
+            "source": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+            "target": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+            "key": "dependency:0",
+            "kind": "error_workflow",
+            "dependency_id": "dependency:0",
+            "node_id": null,
+            "evidence_location": "$.settings.errorWorkflow",
+            "status": "Found In Import Set",
+            "confidence": "high"
+          },
+          {
+            "source": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+            "target": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+            "key": "dependency:1",
+            "kind": "sub_workflow",
+            "dependency_id": "dependency:1",
+            "node_id": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+            "evidence_location": "$.nodes[1].parameters.workflowId",
+            "status": "Found In Import Set",
+            "confidence": "high"
+          },
+          {
+            "source": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+            "target": "unresolved-workflow:sha256:6482a57d52af81b4459efb535f4caad13ec595c275da6554a218e82c658d9148",
+            "key": "dependency:2",
+            "kind": "sub_workflow",
+            "dependency_id": "dependency:2",
+            "node_id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+            "evidence_location": "$.nodes[2].parameters.workflowId.value",
+            "status": "Missing From Import Set",
+            "confidence": "high"
+          },
+          {
+            "source": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+            "target": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+            "key": "dependency:12",
+            "kind": "sub_workflow",
+            "dependency_id": "dependency:12",
+            "node_id": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+            "evidence_location": "$.nodes[0].parameters.workflowId.value",
+            "status": "Found In Import Set",
+            "confidence": "high"
+          },
+          {
+            "source": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+            "target": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+            "key": "dependency:15",
+            "kind": "sub_workflow",
+            "dependency_id": "dependency:15",
+            "node_id": "node:sha256:269884f51665e95cd75c1d55f2fa4e6e5b128cd23fb7f5f9aef2edc1060bc5ea",
+            "evidence_location": "$.nodes[0].parameters.workflowId.value",
+            "status": "Found In Import Set",
+            "confidence": "high"
+          }
+        ],
+        "output_ports": [],
+        "cyclic_components": [
+          [
+            "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+            "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+            "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03"
+          ]
+        ],
+        "has_cycles": true
+      },
+      "node_graphs": [
+        {
+          "workflow_id": "workflow:sha256:26b3e9af78c33d0235bf9b0b6b9a2c86d153fef24845aece049f0471e3903563",
+          "file": "examples\\sprint2-formal\\workflows\\A.json",
+          "directed": true,
+          "multigraph": true,
+          "nodes": [
+            {
+              "id": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "node_id": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "node_index": 0,
+              "location": "$.nodes[0]",
+              "name_fingerprint": "node-name:sha256:3c3d805c831d3c76831b8b65dd0dd9d503fa0d0c1dcf819f4b895469e412bb6f",
+              "type_fingerprint": "node-type:sha256:99e534b91c38212dec06de8eece9dfbf7195f47c23392e1b141d1f226e2fa3be",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+              "node_id": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+              "node_index": 1,
+              "location": "$.nodes[1]",
+              "name_fingerprint": "node-name:sha256:cdd88d22a5012558837a227b2bcf658649ba36235dcda8623bc7a385dbba3cbf",
+              "type_fingerprint": "node-type:sha256:40140dfbab6677ff23603f1d9a517abbc5c9aa882f5f0f931980dd3b7b2687e4",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+              "node_id": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+              "node_index": 2,
+              "location": "$.nodes[2]",
+              "name_fingerprint": "node-name:sha256:612a8d634f2cc1eca463b773b125f4d1d2e1c0e6b6d7dc5af0c4e221badd798b",
+              "type_fingerprint": "node-type:sha256:40140dfbab6677ff23603f1d9a517abbc5c9aa882f5f0f931980dd3b7b2687e4",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:a982a1c374fa06b7577d04ae9ed15d9a469a00f8cc28e225a10a755a21c10a07",
+              "node_id": "node:sha256:a982a1c374fa06b7577d04ae9ed15d9a469a00f8cc28e225a10a755a21c10a07",
+              "node_index": 3,
+              "location": "$.nodes[3]",
+              "name_fingerprint": "node-name:sha256:68f1e90125e2a18313e5d49d5ce669651fe6ef32461c89174f408828677bdbf2",
+              "type_fingerprint": "node-type:sha256:40140dfbab6677ff23603f1d9a517abbc5c9aa882f5f0f931980dd3b7b2687e4",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+              "node_id": "node:sha256:db68e0533976cf2ecf9fb70b5c83a179232f8b306a8b2f6d63eb70184bf163b3",
+              "node_index": 4,
+              "location": "$.nodes[4]",
+              "name_fingerprint": "node-name:sha256:092485f0ef4f3125d7771a7a9c72878996f256fc5a2dfc100268ef93792bd569",
+              "type_fingerprint": "node-type:sha256:40140dfbab6677ff23603f1d9a517abbc5c9aa882f5f0f931980dd3b7b2687e4",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:b6b78d48751773011eaaa765090f5b5e031705a6bc8888ce7fd40365140d299d",
+              "node_id": "node:sha256:b6b78d48751773011eaaa765090f5b5e031705a6bc8888ce7fd40365140d299d",
+              "node_index": 5,
+              "location": "$.nodes[5]",
+              "name_fingerprint": "node-name:sha256:511a2fb5a8a3d84e345a47ba3a60050dcd87f347bdef4c529c41b113c1d53ad3",
+              "type_fingerprint": "node-type:sha256:40140dfbab6677ff23603f1d9a517abbc5c9aa882f5f0f931980dd3b7b2687e4",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+              "node_id": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+              "node_index": 6,
+              "location": "$.nodes[6]",
+              "name_fingerprint": "node-name:sha256:11a9ebf9301a51b3c3799aece1ddddb8f146649c5f7dac98c1d0cdd8f2c7ad39",
+              "type_fingerprint": "node-type:sha256:527dd7f873b9b8a50134e972a5267cd8550741606ce758b2028c2dd9c3ab2cd2",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:62d88e72df97bfa909b44f4a33266a6aca489c22ea8d009dc0217adc0f04e51e",
+              "node_id": "node:sha256:62d88e72df97bfa909b44f4a33266a6aca489c22ea8d009dc0217adc0f04e51e",
+              "node_index": 7,
+              "location": "$.nodes[7]",
+              "name_fingerprint": "node-name:sha256:3b7f4e777d63669ecd787b350197cae7372b639305a177348efc0f48023c166d",
+              "type_fingerprint": "node-type:sha256:18899c34cec7e4e60d7ea39c1f4d75832db18d03b5139d1a36bbada468a1936f",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            }
+          ],
+          "edges": [
+            {
+              "source": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "target": "node:sha256:d806d173fc86cc93718c828ecf53538f872d971bc4b205d75de37e7ecf1014bd",
+              "key": 0,
+              "source_type": "main",
+              "target_type": "main",
+              "output_index": 0,
+              "input_index": 0,
+              "location": "$.connections{source:0}{type:0}[0][0]"
+            },
+            {
+              "source": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "target": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+              "key": 1,
+              "source_type": "main",
+              "target_type": "main",
+              "output_index": 0,
+              "input_index": 0,
+              "location": "$.connections{source:0}{type:0}[0][1]"
+            },
+            {
+              "source": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "target": "node:sha256:b7fb272828f6177d95e545da198f677a916b448f9f46ad971f08297f3db5c5ca",
+              "key": 2,
+              "source_type": "main",
+              "target_type": "main",
+              "output_index": 1,
+              "input_index": 0,
+              "location": "$.connections{source:0}{type:0}[1][0]"
+            },
+            {
+              "source": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "target": "node:sha256:a982a1c374fa06b7577d04ae9ed15d9a469a00f8cc28e225a10a755a21c10a07",
+              "key": 3,
+              "source_type": "main",
+              "target_type": "main",
+              "output_index": 3,
+              "input_index": 0,
+              "location": "$.connections{source:0}{type:0}[3][0]"
+            },
+            {
+              "source": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+              "target": "node:sha256:62d88e72df97bfa909b44f4a33266a6aca489c22ea8d009dc0217adc0f04e51e",
+              "key": 4,
+              "source_type": "main",
+              "target_type": "main",
+              "output_index": 0,
+              "input_index": 0,
+              "location": "$.connections{source:1}{type:0}[0][0]"
+            }
+          ],
+          "output_ports": [
+            {
+              "source": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "source_type": "main",
+              "output_index": 0,
+              "empty_form": null,
+              "location": "$.connections{source:0}{type:0}[0]"
+            },
+            {
+              "source": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "source_type": "main",
+              "output_index": 1,
+              "empty_form": null,
+              "location": "$.connections{source:0}{type:0}[1]"
+            },
+            {
+              "source": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "source_type": "main",
+              "output_index": 2,
+              "empty_form": "null",
+              "location": "$.connections{source:0}{type:0}[2]"
+            },
+            {
+              "source": "node:sha256:e1135815930fa61c6150e940ddaa0802b8fe63de59179f3e0b598a5d53fdbf9e",
+              "source_type": "main",
+              "output_index": 3,
+              "empty_form": null,
+              "location": "$.connections{source:0}{type:0}[3]"
+            },
+            {
+              "source": "node:sha256:1673514a7877a1f149e1abc2dbf576ebdb30fe135ac6fa7ab0d427cfcb6891ab",
+              "source_type": "main",
+              "output_index": 0,
+              "empty_form": null,
+              "location": "$.connections{source:1}{type:0}[0]"
+            }
+          ],
+          "cyclic_components": [],
+          "has_cycles": false
+        },
+        {
+          "workflow_id": "workflow:sha256:ff08714089339bbcfeb0f716904bd43d3cd18d35473f75e9cfe42e8410602e03",
+          "file": "examples\\sprint2-formal\\workflows\\B.json",
+          "directed": true,
+          "multigraph": true,
+          "nodes": [
+            {
+              "id": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+              "node_id": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+              "node_index": 0,
+              "location": "$.nodes[0]",
+              "name_fingerprint": "node-name:sha256:3d4e2593f9dcfbb1026751c141b01b3b55f27d49295d84d2d9c15d1d69abf6c5",
+              "type_fingerprint": "node-type:sha256:40140dfbab6677ff23603f1d9a517abbc5c9aa882f5f0f931980dd3b7b2687e4",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+              "node_id": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+              "node_index": 1,
+              "location": "$.nodes[1]",
+              "name_fingerprint": "node-name:sha256:e55a662c33241888864e06475fb2529e512709c3ab3fac28942bea0d60b8b9c2",
+              "type_fingerprint": "node-type:sha256:527dd7f873b9b8a50134e972a5267cd8550741606ce758b2028c2dd9c3ab2cd2",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            }
+          ],
+          "edges": [
+            {
+              "source": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+              "target": "node:sha256:612e3b216a2f7fdb5bc6cb41a391405eab7e1c8523dfb8065b638ef106491f97",
+              "key": 0,
+              "source_type": "main",
+              "target_type": "main",
+              "output_index": 0,
+              "input_index": 0,
+              "location": "$.connections{source:0}{type:0}[0][0]"
+            }
+          ],
+          "output_ports": [
+            {
+              "source": "node:sha256:f1766143688ed3b8bc2fc7fdb73f45cf8585ad45271ef3fda46e35da44f71a2e",
+              "source_type": "main",
+              "output_index": 0,
+              "empty_form": null,
+              "location": "$.connections{source:0}{type:0}[0]"
+            }
+          ],
+          "cyclic_components": [],
+          "has_cycles": false
+        },
+        {
+          "workflow_id": "workflow:sha256:f065f5436288e0eb65d1b2644b4a81c2a57ed25e2d80015b61e6bb78f612be30",
+          "file": "examples\\sprint2-formal\\workflows\\C.json",
+          "directed": true,
+          "multigraph": true,
+          "nodes": [
+            {
+              "id": "node:sha256:269884f51665e95cd75c1d55f2fa4e6e5b128cd23fb7f5f9aef2edc1060bc5ea",
+              "node_id": "node:sha256:269884f51665e95cd75c1d55f2fa4e6e5b128cd23fb7f5f9aef2edc1060bc5ea",
+              "node_index": 0,
+              "location": "$.nodes[0]",
+              "name_fingerprint": "node-name:sha256:4320e427ce1b423ef1eba1c2bc47b97155645cd3abca05f1a8e5e64ce751fc56",
+              "type_fingerprint": "node-type:sha256:40140dfbab6677ff23603f1d9a517abbc5c9aa882f5f0f931980dd3b7b2687e4",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            },
+            {
+              "id": "node:sha256:6b4d7bb0446154030590382e4db3ec7a6f42ab1b74c51b1e2fa2911f7b06f048",
+              "node_id": "node:sha256:6b4d7bb0446154030590382e4db3ec7a6f42ab1b74c51b1e2fa2911f7b06f048",
+              "node_index": 1,
+              "location": "$.nodes[1]",
+              "name_fingerprint": "node-name:sha256:b1a7201427c3de2400c76875b58ce1251ad3487859ca960ea939ae83fa507afc",
+              "type_fingerprint": "node-type:sha256:40140dfbab6677ff23603f1d9a517abbc5c9aa882f5f0f931980dd3b7b2687e4",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            }
+          ],
+          "edges": [],
+          "output_ports": [],
+          "cyclic_components": [],
+          "has_cycles": false
+        },
+        {
+          "workflow_id": "workflow:sha256:f1af265cfc31943b9ea016117a7f3179ab2829eba9d72090530f7d829f337952",
+          "file": "examples\\sprint2-formal\\workflows\\ERROR_HANDLER.json",
+          "directed": true,
+          "multigraph": true,
+          "nodes": [
+            {
+              "id": "node:sha256:d10a6bea40084ffe2f0cf24cb6c2371cf272014ba085c4ec2deb49572dd5f8af",
+              "node_id": "node:sha256:d10a6bea40084ffe2f0cf24cb6c2371cf272014ba085c4ec2deb49572dd5f8af",
+              "node_index": 0,
+              "location": "$.nodes[0]",
+              "name_fingerprint": "node-name:sha256:315287b6a2d04b1d29dcfd91e80d0364a10e9bf978bc2c129cb86f4d013fbe09",
+              "type_fingerprint": "node-type:sha256:98e39a73e4aa16c775477a9373484d22e9088f1e3a3bb877c7e37fb27ec60e64",
+              "metadata_policy": "source identity retained locally; exported as fingerprints"
+            }
+          ],
+          "edges": [],
+          "output_ports": [],
+          "cyclic_components": [],
+          "has_cycles": false
+        }
+      ]
+    },
+    "notice": "Offline lexical and structural evidence only. Missing From Import Set does not mean missing on the destination. Cycles are informational. Unrecognized node semantics and runtime-computed dependencies remain unverified."
+  }
+}

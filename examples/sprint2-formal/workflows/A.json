@@ -1,0 +1,185 @@
+{
+  "id": "FORMAL_A",
+  "name": "Fabricated formal entry",
+  "nodes": [
+    {
+      "id": "route-A",
+      "name": "route-A",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "call-B",
+      "name": "call-B",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": "FORMAL_B"
+      }
+    },
+    {
+      "id": "call-D",
+      "name": "call-D",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "FORMAL_D"
+        }
+      }
+    },
+    {
+      "id": "call-dynamic",
+      "name": "call-dynamic",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.nextWorkflowId }}"
+        }
+      }
+    },
+    {
+      "id": "file-call",
+      "name": "file-call",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "source": "localFile",
+        "workflowPath": "do-not-open.json"
+      }
+    },
+    {
+      "id": "embedded-call",
+      "name": "embedded-call",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "source": "parameter",
+        "workflowJson": "{\"id\":\"FORMAL_B\",\"nodes\":[],\"connections\":{}}"
+      }
+    },
+    {
+      "id": "fetch-A",
+      "name": "fetch-A",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "url": "https://formal.example.invalid/api?token=SYNTHETIC_FORMAL_VALUE",
+        "headers": {
+          "Authorization": "Bearer SYNTHETIC_FORMAL_VALUE"
+        },
+        "config": "={{ $vars.S2_BASE + $env.S2_CONFIG }}",
+        "file": "/mnt/formal/input.csv"
+      },
+      "credentials": {
+        "syntheticAuth": {
+          "id": "FORMAL_REFERENCE_ONLY",
+          "name": "Synthetic formal credential reference"
+        }
+      }
+    },
+    {
+      "id": "future-A",
+      "name": "future-A",
+      "type": "community.syntheticFutureNode",
+      "typeVersion": 99,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "opaque": {
+          "doNotAlter": [
+            1,
+            null,
+            true
+          ]
+        }
+      }
+    }
+  ],
+  "connections": {
+    "route-A": {
+      "main": [
+        [
+          {
+            "node": "call-B",
+            "index": 0,
+            "type": "main"
+          },
+          {
+            "node": "fetch-A",
+            "index": 0,
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "node": "call-D",
+            "index": 0,
+            "type": "main"
+          }
+        ],
+        null,
+        [
+          {
+            "node": "call-dynamic",
+            "index": 0,
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "fetch-A": {
+      "main": [
+        [
+          {
+            "node": "future-A",
+            "index": 0,
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "errorWorkflow": "FORMAL_ERROR"
+  },
+  "futureFields": {
+    "unmodified": true
+  }
+}

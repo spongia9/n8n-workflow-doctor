@@ -1,0 +1,158 @@
+{
+  "id": "A",
+  "name": "Synthetic order pipeline",
+  "nodes": [
+    {
+      "id": "A-start",
+      "name": "Start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "A-route",
+      "name": "Route",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "A-call-B",
+      "name": "Call B",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "source": "database",
+        "workflowId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "B",
+          "cachedResultName": "Synthetic child"
+        }
+      }
+    },
+    {
+      "id": "A-dynamic",
+      "name": "Dynamic Call",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "source": "database",
+        "workflowId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.nextWorkflowId }}"
+        }
+      }
+    },
+    {
+      "id": "A-fetch",
+      "name": "Fetch A",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "url": "https://service.example.invalid/orders?tenant=demo",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer SYNTHETIC_DO_NOT_EXPORT"
+            }
+          ]
+        },
+        "environment": "={{ $env.DEMO_API_TOKEN }}",
+        "variable": "={{ $vars.DEMO_BASE }}"
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "DEMO_CREDENTIAL",
+          "name": "Synthetic demo credential"
+        }
+      }
+    },
+    {
+      "id": "A-file",
+      "name": "Read File",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "fileSelector": "/srv/demo/input.csv"
+      }
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Route",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route": {
+      "main": [
+        [
+          {
+            "node": "Call B",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Fetch A",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        null,
+        [
+          {
+            "node": "Dynamic Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch A": {
+      "main": [
+        [
+          {
+            "node": "Read File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "errorWorkflow": "ERROR_HANDLER"
+  }
+}
